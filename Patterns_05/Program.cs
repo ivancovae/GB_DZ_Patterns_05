@@ -5,7 +5,7 @@ namespace Patterns_05
 {
     class Program
     {
-        static Graphics graphics;
+        private static Graphics graphics;
         static void Main(string[] args)
         {
             Main mainForm = new Main();
@@ -17,9 +17,9 @@ namespace Patterns_05
         private static void MainForm_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-                RectangleFactory.GetRectangle("Red").DrawRectangle(graphics, e.Location, new Size(20, 20));
+                ObjectFactory.GetObject("Rectangle").Draw(graphics, e.Location, new Size(20, 20));
             else if (e.Button == MouseButtons.Right)
-                CicleFactory.GetCicle("Blue").DrawCicle(graphics, e.Location, new Size(20, 20));
+                ObjectFactory.GetObject("Cicle").Draw(graphics, e.Location, new Size(20, 20));
         }
     }
 }

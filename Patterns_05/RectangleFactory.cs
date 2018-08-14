@@ -2,18 +2,30 @@
 
 namespace Patterns_05
 {
-    class RectangleFactory
+    /// <summary>
+    /// Класс получения объекта по типу
+    /// </summary>
+    class ObjectFactory
     {
-        static Dictionary<string, IDrawRectangleAPI> rectangles = new Dictionary<string, IDrawRectangleAPI>();
+        private static Dictionary<string, IDrawAPI> objects = new Dictionary<string, IDrawAPI>();
 
-        public static IDrawRectangleAPI GetRectangle(string rectangleType)
+        /// <summary>
+        /// Получение объекта по типу
+        /// </summary>
+        /// <param name="objectType">тип объекта</param>
+        /// <returns>объект реализующий метод Draw</returns>
+        public static IDrawAPI GetObject(string objectType)
         {
-            switch (rectangleType)
+            switch (objectType)
             {
-                case "Red":
-                    if (!rectangles.ContainsKey("Red"))
-                        rectangles["Red"] = new RedRectangle();
-                    return rectangles["Red"];
+                case "Rectangle":
+                    if (!objects.ContainsKey("Rectangle"))
+                        objects["Rectangle"] = new RectangleObject();
+                    return objects["Rectangle"];
+                case "Cicle":
+                    if (!objects.ContainsKey("Cicle"))
+                        objects["Cicle"] = new CicleObject();
+                    return objects["Cicle"];
                 default:
                     break;
             }

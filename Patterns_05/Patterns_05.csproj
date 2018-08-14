@@ -44,10 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlueCicle.cs" />
-    <Compile Include="CicleFactory.cs" />
-    <Compile Include="IDrawCicleAPI.cs" />
-    <Compile Include="IDrawRectangleAPI.cs" />
+    <Compile Include="CicleObject.cs" />
+    <Compile Include="IDrawAPI.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,7 +55,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RectangleFactory.cs" />
-    <Compile Include="RedRectangle.cs" />
+    <Compile Include="RectangleObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
