@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractMath.cs" />
     <Compile Include="CicleObject.cs" />
     <Compile Include="IDrawAPI.cs" />
     <Compile Include="Main.cs">
@@ -52,8 +53,10 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Math.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyMath.cs" />
     <Compile Include="RectangleFactory.cs" />
     <Compile Include="RectangleObject.cs" />
   </ItemGroup>
